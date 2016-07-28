@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Skillspeed</title>
+    <title><%= full_title(yield(:title))%></title>
     <%= csrf_meta_tags %>
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
@@ -9,7 +9,9 @@
   </head>
 
   <body>
-	<p> Hi i am a testing branch</p>
+    <%= link_to "Home", static_pages_home_path %>
+    <%= link_to "About", static_pages_about_path %>
+    <%= link_to "Help", static_pages_help_path %>
     <%= yield %>
   </body>
 </html>
